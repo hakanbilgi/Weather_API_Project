@@ -104,7 +104,8 @@ const getWeatherDataFromApi = async () => {
 };
 //window onload
 // document.querySelector(".cities").addEventListener("click", (e) => {
-//   if (e.target.tagName == "IMG") {
-//     alert("img is clicked!!!");
-//   }
-// });
+//     if (e.target.tagName == "IMG") {
+//         alert("img is clicked!!!")
+//     }
+// }
+// )
