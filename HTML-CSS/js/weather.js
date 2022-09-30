@@ -81,10 +81,10 @@ const getWeatherDataFromApi = async () => {
   }
   form.reset();
 };
-window onload
-document.querySelector(".cities").addEventListener("click", (e) => {
-    if (e.target.tagName == "IMG") {
-        alert("img is clicked!!!")
-    }
-}
-)
+// window onload
+// document.querySelector(".cities").addEventListener("click", (e) => {
+//     if (e.target.tagName == "IMG") {
+//         alert("img is clicked!!!")
+//     }
+// }
+// )
