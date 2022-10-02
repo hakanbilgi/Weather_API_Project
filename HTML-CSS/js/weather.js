@@ -34,16 +34,21 @@ const getWeatherDataFromApi = async () => {
 
     const cityNameSpans = list.querySelectorAll(".city span");
     const cityNameSpansArray = Array.from(cityNameSpans);
+
     if (cityNameSpansArray.length > 0) {
       const filteredArray = cityNameSpansArray.filter(
         (span) => span.innerText == name
       );
+
       if (filteredArray.length > 0) {
         msg.innerText = `You already know the weather for ${name}, Please search for another city 😉`;
+
         setTimeout(() => {
           msg.innerText = "";
         }, 5000);
+
         form.reset();
+        
         return;
       }
     }
@@ -67,11 +72,14 @@ const getWeatherDataFromApi = async () => {
                             </figure>`;
 
     list.prepend(createdLi);
+
+
     createdLi.addEventListener("click", (e) => {
       if (e.target.tagName == "IMG") {
         e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
       }
     });
+
   } catch (error) {
     console.log(error);
     msg.innerText = `404 (City Not Found)`;
@@ -79,6 +87,7 @@ const getWeatherDataFromApi = async () => {
       msg.innerText = "";
     }, 5000);
   }
+
   form.reset();
-  
+
 };
