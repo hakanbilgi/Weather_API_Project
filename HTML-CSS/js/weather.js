@@ -69,7 +69,8 @@ const getWeatherDataFromApi = async () => {
                                 <figcaption>${
                                   weather[0].description
                                 }</figcaption>
-                            </figure>`;
+                            </figure>
+                            <button class="del">Remove</button>`;
 
     list.prepend(createdLi);
 
@@ -79,6 +80,13 @@ const getWeatherDataFromApi = async () => {
         e.target.src = e.target.src == iconUrl ? iconUrlAWS : iconUrl;
       }
     });
+    createdLi.querySelector(".del").addEventListener("click",(e)=>{
+       createdLi.remove();
+       
+    });
+
+
+
 
   } catch (error) {
     console.log(error);
