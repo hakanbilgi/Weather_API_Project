@@ -3,11 +3,14 @@ const input = document.querySelector(".container input");
 const msg = document.querySelector("span.msg");
 const list = document.querySelector(".ajax-section ul.cities");
 
-// localStorage.setItem("tokenKeyEncrypted", EncryptStringAES("4d8fb5b93d4af21d66a2948710284366"));
+// localStorage.setItem(
+//   "tokenKeyEncrypted",
+//   EncryptStringAES("61842754ef2a8d32b10ea7bbebac1130")
+// );
 
 localStorage.setItem(
   "tokenKey",
-  "RAPAIooyOVFdRNn7gPi6i8vUp3OJvy0Np5wgMGgNO0a2a258kya95/arqJmhPrWc"
+  "+qc+QNmxZlPJwWfqZjsFeZkuirM7zbCr1A5BbgaUmZcbYECKvnc4pAmwotnN8OxS"
 );
 
 form.addEventListener("submit", (event) => {
