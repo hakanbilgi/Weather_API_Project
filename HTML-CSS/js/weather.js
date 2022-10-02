@@ -3,7 +3,6 @@ const input = document.querySelector(".container input");
 const msg = document.querySelector("span.msg");
 const list = document.querySelector(".ajax-section ul.cities");
 
-
 localStorage.setItem(
   "tokenKey",
   "+qc+QNmxZlPJwWfqZjsFeZkuirM7zbCr1A5BbgaUmZcbYECKvnc4pAmwotnN8OxS"
@@ -14,11 +13,9 @@ form.addEventListener("submit", (event) => {
   getWeatherDataFromApi();
 });
 
-//Api Get func. (http methods == Verbs)
 const getWeatherDataFromApi = async () => {
-  //alert("http request is gone!");
   const tokenKey = DecryptStringAES(localStorage.getItem("tokenKey"));
-  //alert(tokenKey);
+
   const inputValue = input.value;
   const units = "metric";
   const lang = "tr";
@@ -28,7 +25,7 @@ const getWeatherDataFromApi = async () => {
     // const response = await fetch(url).then(response => response.json());
     const response = await axios(url);
     console.log(response);
-    //obj destr.
+
     const { main, sys, weather, name } = response.data;
 
     const iconUrl = `http://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
@@ -49,7 +46,7 @@ const getWeatherDataFromApi = async () => {
         return;
       }
     }
-    //console.log(cityNameSpans);
+
     const createdLi = document.createElement("li");
     createdLi.classList.add("city");
     createdLi.innerHTML = `<h2 class="city-name" data-name="${name}, ${
@@ -67,7 +64,7 @@ const getWeatherDataFromApi = async () => {
                                   weather[0].description
                                 }</figcaption>
                             </figure>`;
-    //append vs. prepend
+
     list.prepend(createdLi);
     createdLi.addEventListener("click", (e) => {
       if (e.target.tagName == "IMG") {
@@ -83,10 +80,3 @@ const getWeatherDataFromApi = async () => {
   }
   form.reset();
 };
-// window onload
-// document.querySelector(".cities").addEventListener("click", (e) => {
-//     if (e.target.tagName == "IMG") {
-//         alert("img is clicked!!!")
-//     }
-// }
-// )
