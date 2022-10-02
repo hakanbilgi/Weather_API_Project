@@ -14,6 +14,7 @@ form.addEventListener("submit", (event) => {
 });
 
 const getWeatherDataFromApi = async () => {
+
   const tokenKey = DecryptStringAES(localStorage.getItem("tokenKey"));
 
   const inputValue = input.value;
@@ -79,4 +80,5 @@ const getWeatherDataFromApi = async () => {
     }, 5000);
   }
   form.reset();
+  
 };
