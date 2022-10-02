@@ -3,10 +3,6 @@ const input = document.querySelector(".container input");
 const msg = document.querySelector("span.msg");
 const list = document.querySelector(".ajax-section ul.cities");
 
-// localStorage.setItem(
-//   "tokenKeyEncrypted",
-//   EncryptStringAES("61842754ef2a8d32b10ea7bbebac1130")
-// );
 
 localStorage.setItem(
   "tokenKey",
