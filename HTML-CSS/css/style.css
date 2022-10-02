@@ -153,6 +153,8 @@ body {
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .ajax-section .city-temp {
@@ -274,15 +276,13 @@ body {
   text-decoration: none;
 }
 .del {
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 1rem 0 auto;
+  padding: 0.7rem;
   background-color: #0c6396;
   color: white;
   border-radius: 10px;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-size: 1rem;
 }
 .del:hover {
